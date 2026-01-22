@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李氏双子百日宴邀请函</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['serif', 'SimSun', 'STSong', 'Microsoft YaHei'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            /* 自定义装饰线样式 */
+            .decor-line {
+                height: 1px;
+                background: linear-gradient(90deg, transparent, #b2222280, transparent);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-[#f4f1ea] flex items-center justify-center p-4 font-serif m-0">
+    <!-- 邀请函主卡片 -->
+    <div class="bg-[#fffcf7] w-full max-w-md shadow-[0_30px_60px_rgba(0,0,0,0.15)] rounded-sm overflow-hidden border-t-[12px] border-b-[12px] border-[#b22222] relative">
+        
+        <!-- 背景暗纹 -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="backgroundImage: url('https://www.transparenttextures.com/patterns/oriental-tiles.png');"></div>
+
+        <!-- 顶部标题区域：调整花朵间距+替换副标题 -->
+        <div class="flex flex-col items-center mt-8 mb-4">
+            <!-- 上下装饰线 -->
+            <div class="w-24 decor-line mb-3"></div>
+            <!-- 百日宴标题：增大花朵与文字的间距 -->
+            <div class="flex items-center gap-8 text-[#b22222] opacity-90">
+                <span class="text-2xl opacity-60">❀</span>
+                <div class="text-5xl font-bold tracking-wider">百日宴</div>
+                <span class="text-2xl opacity-60">❀</span>
+            </div>
+            <!-- 副标题替换为“李氏双子” -->
+            <div class="text-xs text-[#8b5e3c] opacity-70 mt-2 tracking-[0.2em]">李氏双子</div>
+            <div class="w-24 decor-line mt-3"></div>
+        </div>
+
+        <!-- 照片区域：替换为宝宝的照片 -->
+        <div class="relative mx-10">
+            <div class="aspect-[4/3] border-4 border-[#d4c5a9] rounded-sm overflow-hidden shadow-lg bg-stone-100">
+                <img 
+                    src="https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/f1126ba441a84a0c8bfe698f4c7d65a8.jpg~tplv-a9rns2rl98-24:720:720.image?lk3s=8e244e95&rcl=202601212127234A0585BCFC8EB10205A2&rrcfp=8a172a1a&x-expires=1769606843&x-signature=2JFui7FiLE5MteSO%2B5uuJhP85sI%3D" 
+                    alt="李氏双子百日宴照片" 
+                    class="w-full h-full object-cover"
+                />
+            </div>
+            <div class="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-[#b22222]"></div>
+            <div class="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-[#b22222]"></div>
+        </div>
+
+        <!-- 主体内容 -->
+        <div class="px-8 pt-8 pb-12 text-center">
+            
+            <!-- 姓名展示 -->
+            <div class="mb-6">
+                <h1 class="text-4xl text-[#8b5e3c] font-bold tracking-[0.3em] flex justify-center items-center gap-4">
+                    <span>李予之</span>
+                    <span class="text-xl text-[#b22222] font-normal">|</span>
+                    <span>李予画</span>
+                </h1>
+                <p class="text-[#b22222] text-xs tracking-[0.6em] mt-3 font-semibold uppercase opacity-80">100 Days Celebration</p>
+            </div>
+
+            <!-- 精彩文案 -->
+            <div class="bg-[#fdf5f5] border-y border-[#f5e6e6] py-4 mb-8">
+                <div class="text-[#b22222] space-y-2 text-sm md:text-base font-medium tracking-widest leading-relaxed">
+                    <p>双春得双宝，双喜映双星</p>
+                    <p>诚邀共庆双子百日</p>
+                    <p>恰逢初五，双福贺新岁</p>
+                </div>
+            </div>
+
+            <!-- 宴请信息 -->
+            <div class="space-y-5 text-stone-700">
+                <div class="flex flex-col items-center">
+                    <div class="w-8 h-[1px] bg-[#d4c5a9] mb-2"></div>
+                    <p class="text-lg font-bold text-stone-800">二零二六 · 正月初五</p>
+                    <p class="text-xs text-stone-500 tracking-widest">（2026年02月21日 星期五）</p>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <p class="text-base font-bold text-stone-800">信宜希尔顿花园酒店</p>
+                    <p class="text-xs text-stone-500 mt-1">广东省信宜市迎宾大道北 272号</p>
+                </div>
+            </div>
+
+            <!-- 底部寄语：删除祥云装饰 -->
+            <div class="mt-10 relative">
+                <div class="text-xs text-[#b22222] tracking-[0.4em] font-bold">
+                    敬备喜酌 · 恭请光临
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 侧边装饰条 -->
+        <div class="absolute top-0 bottom-0 left-2 w-px bg-[#b22222]/10"></div>
+        <div class="absolute top-0 bottom-0 right-2 w-px bg-[#b22222]/10"></div>
+    </div>
+</body>
+</html>
